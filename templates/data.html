@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/static/style.css">
+
+<br>
+<header>
+  <nav class = "nav">
+    <a class = "navtxt" href = "/">Column Names</a>
+    <a class = "navtxt active" href = "/data">Data</a>
+    <a class = "navtxt" href = "/graph">Graph</a>
+  </nav>
+</header>
+
+<div class = content>
+    <br>
+    {{"Type in the data here. For example: 'David' and '15' for 'Name' and 'Age'."}}
+    <br>
+
+    {% if columns != [] %}
+      <p class="datalbl">Your Columns:</p>
+      <br>
+      {{"First column: " + columns[col_rep]["col1"]}}
+      <br>
+      {{"Second column: " + columns[col_rep]["col2"]}}
+        
+    {% endif %} 
+
+    {% if columns %}
+    <p class="datalbl">Your Data:</p>  
+      {% if data_ != [] %}  
+          <table class = "data">
+            <tr>
+              <th>{{columns[col_rep]["col1"]}}</th>
+              <th>{{columns[col_rep]["col2"]}}</th>
+            </tr>
+            {% for x in data_ %}
+              <tr>
+                <td>{{x["data1"]}} </td>
+                <td> {{x["data2"]}} </td>
+              </tr>
+            {% endfor %}    
+          </table>
+      {% else %}
+          {{"No data yet"}}
+
+      {% endif %}     
+    {% endif %} 
+
+    <form action="/data" method="post">
+        <p><input type="text" name="data1" placeholder="New Column 1 data" required="true"></p>
+        <p><input type="text" name="data2" placeholder="New Column 2 data"></p>
+        <p><input type="submit" value="Add"></p>
+    </form>
+
+    <form action="/clear" method="post">
+      <p><input type="submit" value="Clear data"></p>
+    </form>
+
+    <form action="/datatograph" method="post">
+      <p><input type="submit" value="Let's make graphs!"></p>
+    </form>
+</div>
+
+<p class = "credit">
+  A website made by <a class = "fb" href = "https://www.facebook.com/syedmasrur.ahmed.12">Syed Masrur Ahmed</a>
+</p>

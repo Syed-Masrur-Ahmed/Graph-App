@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="/static/style.css">
+
+<br>
+<header>
+  <nav class = "nav">
+    <a class = "navtxt" href = "/">Column Names</a>
+    <a class = "navtxt" href = "/data">Data</a>
+    <a class = "navtxt active" href = "/graph">Graph</a>
+  </nav>
+</header>
+
+<div class = content>
+    <br>
+    {{"What kind of graphs do you want for your data?"}}
+    <br>
+
+    <form action="/graph" method="post">
+      <input type="checkbox" id="line" name="line" value="yes">
+      <label for="line"> Line Graph </label><br>
+
+      <input type="checkbox" id="bar" name="bar" value="yes">
+      <label for="bar"> Bar Graph </label><br>
+
+      <input type="checkbox" id="scatter" name="scatter" value="yes">
+      <label for="scatter"> Scatter Plot</label><br>
+
+      <input type="submit" value="Submit">
+    </form>  
+
+
+    {% if l or b or s %}
+
+      <form action="/restart" method="post">
+        <p><input type="submit" value="Start over!"></p>
+      </form>
+
+      {% if l == 1 %}  
+        <figure>  
+          <img src="static/line.png">
+          <br>
+          <figcaption>Line Graph</figcaption>
+        </figure>  
+      {% endif %}  
+      
+      {% if b == 1 %}
+        <figure>  
+          <img src="static/bar.png">
+          <br>
+          <figcaption>Bar Graph</figcaption>
+        </figure> 
+      {% endif %}
+      
+      {% if s == 1 %}
+        <br>
+        <figure>  
+          <img src="static/scatter.png">
+          <br>
+          <figcaption>Scatter Graph</figcaption>
+        </figure> 
+      {% endif %}       
+
+    {% else %}
+      <img src="static/Fillers/def.png">
+    {% endif %}
+</div>
+
+<p class = "credit">
+  A website made by <a class = "fb" href = "https://www.facebook.com/syedmasrur.ahmed.12">Syed Masrur Ahmed</a>
+</p>
