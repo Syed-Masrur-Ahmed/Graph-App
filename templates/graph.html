@@ -24,17 +24,13 @@
       <input type="checkbox" id="scatter" name="scatter" value="yes">
       <label for="scatter"> Scatter Plot</label><br>
 
-      <input type="submit" value="Submit">
+      <input class = "submit" type="submit" value="Submit">
     </form>  
 
 
-    {% if l or b or s %}
+    {% if l or b or s and graph_data != "" %}
 
-      <form action="/restart" method="post">
-        <p><input type="submit" value="Start over!"></p>
-      </form>
-
-      {% if l == 1 %}  
+      {% if l %}  
         <figure>  
           <img src="static/line.png">
           <br>
@@ -42,7 +38,7 @@
         </figure>  
       {% endif %}  
       
-      {% if b == 1 %}
+      {% if b %}
         <figure>  
           <img src="static/bar.png">
           <br>
@@ -50,7 +46,7 @@
         </figure> 
       {% endif %}
       
-      {% if s == 1 %}
+      {% if s %}
         <br>
         <figure>  
           <img src="static/scatter.png">
@@ -60,10 +56,20 @@
       {% endif %}       
 
     {% else %}
-      <img src="static/Fillers/def.png">
+      <h2>Line Graph</h2>
+      <h4>A line graph—also known as a line plot or 
+          a line chart—is a graph that uses lines to connect 
+          individual data points.</h4>
+      <h2>Bar Graph</h2>
+      <h4>A diagram in which the numerical values of variables 
+          are represented by the height or length 
+          of lines or rectangles of equal width.</h4>
+      <h2>Scatter Plot</h2>
+      <h4>A graph of plotted points that show 
+          the relationship between two sets of data.</h4>      
     {% endif %}
 </div>
 
 <p class = "credit">
-  A website made by <a class = "fb" href = "https://www.facebook.com/syedmasrur.ahmed.12">Syed Masrur Ahmed</a>
+  A website made by <a target="_blank" class = "fb" href = "https://www.facebook.com/syedmasrur.ahmed.12">Syed Masrur Ahmed</a>
 </p>

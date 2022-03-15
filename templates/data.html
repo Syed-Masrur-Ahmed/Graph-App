@@ -17,9 +17,9 @@
     {% if columns != [] %}
       <p class="datalbl">Your Columns:</p>
       <br>
-      {{"First column: " + columns[col_rep]["col1"]}}
+      {{"First column: " + columns[-1]["col1"]}}
       <br>
-      {{"Second column: " + columns[col_rep]["col2"]}}
+      {{"Second column: " + columns[-1]["col2"]}}
         
     {% endif %} 
 
@@ -28,8 +28,8 @@
       {% if data_ != [] %}  
           <table class = "data">
             <tr>
-              <th>{{columns[col_rep]["col1"]}}</th>
-              <th>{{columns[col_rep]["col2"]}}</th>
+              <th>{{columns[-1]["col1"]}}</th>
+              <th>{{columns[-1]["col2"]}}</th>
             </tr>
             {% for x in data_ %}
               <tr>
@@ -53,12 +53,16 @@
     <form action="/clear" method="post">
       <p><input type="submit" value="Clear data"></p>
     </form>
-
+    
+    <form action="/clearrow" method="post">
+      <p><input type="submit" value="Clear row"></p>
+    </form>
+    
     <form action="/datatograph" method="post">
       <p><input type="submit" value="Let's make graphs!"></p>
     </form>
 </div>
 
 <p class = "credit">
-  A website made by <a class = "fb" href = "https://www.facebook.com/syedmasrur.ahmed.12">Syed Masrur Ahmed</a>
+  A website made by <a target="_blank" class = "fb" href = "https://www.facebook.com/syedmasrur.ahmed.12">Syed Masrur Ahmed</a>
 </p>
