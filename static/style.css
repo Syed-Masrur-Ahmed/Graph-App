@@ -1,103 +1,114 @@
-
 :root {
-    --darkgreen: #36453B;
+  --darkgreen: #36453b;
 }
 
 body {
-    font-family: main;
-    color:white;
-    background-color: var(--darkgreen);
-    font-family:  "Calibri";
-    font-size: 110%;
-    font-weight: bold;
-    margin-right: 0;
-    margin-left: 0;
+  font-family: main;
+  color: white;
+  background-color: var(--darkgreen);
+  font-family: "Calibri";
+  font-size: 110%;
+  font-weight: bold;
+  margin-right: 0;
+  margin-left: 0;
 }
 
-
-
 table {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .datalbl {
-    margin-top: 20px;
-    margin-bottom: 0;
-    text-align: center;
-    font-size: 110%;
-    text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 110%;
+  text-transform: uppercase;
 }
 
-.navtxt{
-
-    margin-right: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-
+.navtxt {
+  margin-right: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .navtxt.active {
-    color:white;
+  color: white;
 }
 
-.nav{
-    padding: 10px;
-    text-align: center;
+.nav {
+  padding: 10px;
+  text-align: center;
 }
 
-a:link{
-   color: #36453B;
+a:link {
+  color: #36453b;
 }
 
-a:hover{
-    color:white
- }
-
-a:active{
-    color:skyblue
- }
-
-header{
-    background-color: #899E8B;    
+a:hover {
+  color: white;
 }
 
-.content{
-    text-align: center;
+a:active {
+  color: skyblue;
 }
 
-table{
-    text-align: center;
+a:visited {
+  color: #364533;
 }
 
-.data{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
+.fb:visited {
+  color: #4295f5;
 }
 
-.credit{
-    position: fixed;
-    bottom: 0;
-    right: 12px;
-    font-size: 80%;
+header {
+  background-color: #899e8b;
 }
 
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-align: center;
+.content {
+  text-align: center;
 }
 
-h2{
-    font-size: 120%;
-    text-align: center;
+table {
+  text-align: center;
 }
 
-figcaption{
-    margin-top: 5px;
-    font-size: 120%;
+.data {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
 }
 
-.fb:link{
-    color: #4295f5;
+.credit {
+  position: fixed;
+  bottom: 0;
+  right: 12px;
+  font-size: 80%;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-size: 120%;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 5px;
+  font-size: 120%;
+}
+
+.fb:link {
+  color: #4295f5;
+}
+
+h4 {
+  margin-top: -15px;
+}
+
+.submit {
+  margin-top: 8px;
 }
